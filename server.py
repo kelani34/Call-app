@@ -3,12 +3,17 @@ from flask_socketio import SocketIO, emit, join_room
 import platform
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "wubba lubba dub dub"
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'kelanisecretkeyforvideocallapp')
 
 socketio = SocketIO(app)
 
+# store numbers of users in a room
 users_in_room = {}
+
+# store all available rooms
 rooms_sid = {}
+
+# store num of all available users
 names_sid = {}
 
 
