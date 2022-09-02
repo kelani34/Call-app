@@ -19,6 +19,9 @@ names_sid = {}
 
 @app.route("/join", methods=["GET"])
 def join():
+    """
+    REF: Api caller for a when a new user joins a particular video room
+    """
     display_name = request.args.get('display_name')
     mute_audio = request.args.get('mute_audio') # 1 or 0
     mute_video = request.args.get('mute_video') # 1 or 0
