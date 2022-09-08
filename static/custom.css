@@ -3,12 +3,14 @@ body {
   margin: 0;
   height: 100%;
   overflow: hidden;
-  background-color:#666262
+  background-color:#666262;
+  text-align: center;
 }
 h1{
   background-color: #000000;
   color:#fde8c9;
   position:fixed; 
+  z-index: 101
 }
 
 #local_vid {

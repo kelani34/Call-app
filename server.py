@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit, join_room
 import platform
 import os
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY_VIDEO_APP', 'thisistheecretkeyfortheroomidremembertochangeit')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY_VIDEO_APP', 'thisistheecretkeyfortheroomidremembertochangit')
 
 #passing the flask app in   socketIO
 socketio = SocketIO(app)
