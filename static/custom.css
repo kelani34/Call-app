@@ -7,7 +7,8 @@ body {
 }
 h1{
   background-color: #000000;
-  color:#fde8c9; 
+  color:#fde8c9;
+  position:fixed; 
 }
 
 #local_vid {
