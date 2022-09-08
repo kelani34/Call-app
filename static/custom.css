@@ -2,7 +2,12 @@ html,
 body {
   margin: 0;
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  background-color:#666262
+}
+h1{
+  background-color: #000000;
+  color:#fde8c9; 
 }
 
 #local_vid {

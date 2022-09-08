@@ -3,12 +3,16 @@ from flask_socketio import SocketIO, emit, join_room
 import platform
 import os
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY_VIDEO_APP', 'thisisthesecretkeyfortheroomidremembertochangeit')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY_VIDEO_APP', 'thisistheecretkeyfortheroomidremembertochangeit')
 
+#passing the flask app in   socketIO
 socketio = SocketIO(app)
 
+#num of users in a room
 users_in_room = {}
+#num of rooms
 rooms_sid = {}
+#num of users
 names_sid = {}
 
 
@@ -92,6 +96,6 @@ def on_data(data):
             data["type"], sender_sid, target_sid))
     socketio.emit('data', data, room=target_sid)
 
-
+print(rooms_sid, names_sid, users_in_room)
 if any(platform.win32_ver()):
     socketio.run(app, debug=True)
