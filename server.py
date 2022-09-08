@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, session
 from flask_socketio import SocketIO, emit, join_room
 import platform
-
+import os
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "wubba lubba dub dub"
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY_VIDEO_APP', 'thisisthesecretkeyfortheroomidremembertochangeit')
 
 socketio = SocketIO(app)
 
